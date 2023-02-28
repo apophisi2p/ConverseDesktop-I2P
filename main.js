@@ -3,6 +3,9 @@ const { app, BrowserWindow, ipcMain, shell } = require('electron')
 const path = require('path');
 const keytar = require('keytar');
 
+app.commandLine.appendSwitch('proxy-server', '10.8.0.1:4444')
+app.commandLine.appendSwitch('ignore-certificate-errors')
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -108,6 +111,7 @@ function createWindow () {
     mainWindow.on('ready-to-show', () => {
         mainWindow.maximize();
     });
+
 
     // and load the index.html of the app.
     mainWindow.loadFile('index.html').catch((reason) => {
