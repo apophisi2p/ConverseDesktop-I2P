@@ -1,0 +1,44 @@
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    user-select: none;           /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+body {
+    background: #f8f8f8;
+	font: normal 14px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: #777;
+}
+
+.conversejs-adoption {
+    background: transparent;
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#conversejs .converse-chatboxes {
+    pointer-events: none;
+}
+
+#conversejs .converse-chatboxes > * {
+    pointer-events: auto;
+}
+
+.chat-body {
+    overflow: hidden;
+ }
+
+#conversejs.converse-embedded .chatbox {
+    flex-grow: 1 !important;
+    flex-shrink: 1 !important;
+}
