@@ -3,8 +3,15 @@ const { app, BrowserWindow, ipcMain, shell } = require('electron')
 const path = require('path');
 const keytar = require('keytar');
 
-app.commandLine.appendSwitch('proxy-server', '10.8.0.1:4444')
+// MODIFICATIONS FOR I2P INTEROPERABILITY. Certificates and Mapping. All requests
+// to Destination addresses other than I2P are mapped to localhost (effectively banned)
+// ALL SETTINGS are GLOBAL for the Electron Platform itself and protect against ANY
+// malicious behaviour of the Java Script code running inside the Electron.   
 app.commandLine.appendSwitch('ignore-certificate-errors')
+app.commandLine.appendSwitch('host-rules', 'MAP * 127.0.0.1, EXCLUDE *.i2p')
+
+// Temp setting for OSX / dev only. Remove in RELEASE
+// app.commandLine.appendSwitch('proxy-server', '10.8.0.1:4444')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
