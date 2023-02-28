@@ -13,11 +13,24 @@ A basic integration of Converse.js `https://conversejs.org/` and Electron. With 
 
 ## Build from source
 
+### Prerequisites
+
+- Install `Node.js` and `npm` on your OS ( Google is your friend :sunglasses: )
+
+### Build instructions
+
+
 ```bash
 git clone http://git.apophis.i2p/apophis/ConverseDesktop-I2P.git
 cd ConverseDesktop-I2P
 npm i
+npm install --save-dev electron-rebuild
 $(npm bin)/electron-rebuild
+```
+Note: If you are using Windows or OSX, you need to run electron-rebuild like this:
+
+```bash
+.\node_modules\.bin\electron-rebuild.cmd
 ```
 
 Then, to run:
