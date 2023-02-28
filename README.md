@@ -27,7 +27,7 @@ npm i
 npm install --save-dev electron-rebuild
 $(npm bin)/electron-rebuild
 ```
-Note: If you are using Windows or OSX, you need to run electron-rebuild like this:
+Note: If you are using Windows or MacOS, you need to run `electron-rebuild` like this:
 
 ```bash
 .\node_modules\.bin\electron-rebuild.cmd
@@ -36,8 +36,15 @@ Note: If you are using Windows or OSX, you need to run electron-rebuild like thi
 Then, to run:
 
 ```bash
-npm start
+npm run start -- --proxy-server=127.0.0.1:4444
 ```
+
+Running the application itself on I2P requires `--proxy-server` to be set correctly:
+
+```bash
+converse_desktop-10.0.0_x86_64.AppImage --proxy-server=127.0.0.1:4444
+```
+
 
 ### Build targets:
 
@@ -48,6 +55,9 @@ npm start
 | Linux            | `npm run dist:linux64` |
 
 More targets could be added via `package.json`. 
+
+
+
 
 
 ## License
