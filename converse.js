@@ -61147,7 +61147,7 @@ class ConverseBrandLogo extends CustomElement {
                         </g>
                     </svg>
                     <span class="brand-name">
-                        <span class="brand-name__text">xmpp.ilita<span class="subdued">.i2p</span></span>
+                        <span class="brand-name__text">Convers<font color="red">&isin;</font><span class="subdued">i2p</span></span>
                         ${is_fullscreen ? y`
                                 <p class="byline">messaging freedom redefined</p>
                             ` : ''}
@@ -65421,8 +65421,6 @@ const user_settings_tplNavigation = el => {
                     <div class="container">
                         <h6 class="brand-heading">Converse</h6>
                         <p class="brand-subtitle">${shared_converse.VERSION_NAME}</p>
-                        <p class="brand-subtitle">${unsafe_html_o(purify_default().sanitize(first_subtitle))}</p>
-                        <p class="brand-subtitle">${unsafe_html_o(purify_default().sanitize(second_subtitle))}</p>
                     </div>
                 </div>` : ''}
 
